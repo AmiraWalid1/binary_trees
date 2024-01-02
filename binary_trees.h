@@ -49,5 +49,5 @@ binary_tree_t *binary_tree_sibling(binary_tree_t *node);
 binary_tree_t *binary_tree_uncle(binary_tree_t *node);
 
 /*for calculate the balance factor*/
-int cal_height_BT(const binary_tree_t *tree);
+size_t cal_height_BT(const binary_tree_t *tree);
 #endif

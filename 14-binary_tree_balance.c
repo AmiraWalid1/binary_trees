@@ -18,14 +18,18 @@ int binary_tree_balance(const binary_tree_t *tree)
  * @tree: is a pointer to the root node of the tree.
  * Return: height of Binary Tree.
 */
-int cal_height_BT(const binary_tree_t *tree)
+size_t cal_height_BT(const binary_tree_t *tree)
 {
+	size_t h_left;
+	size_t h_right;
+
 	if (tree == NULL)
 		return (-1);
 	if (tree->left == NULL && tree->right == NULL)
 		return (0);
-	int h_left = cal_height_BT(tree->left);
-	int h_right = cal_height_BT(tree->right);
+
+	cal_height_BT(tree->left);
+	cal_height_BT(tree->right);
 
 	if (h_left > h_right)
 		return (h_left + 1);
