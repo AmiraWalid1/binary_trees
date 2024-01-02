@@ -28,8 +28,8 @@ size_t cal_height_BT(const binary_tree_t *tree)
 	if (tree->left == NULL && tree->right == NULL)
 		return (0);
 
-	cal_height_BT(tree->left);
-	cal_height_BT(tree->right);
+	h_left = cal_height_BT(tree->left);
+	h_right = cal_height_BT(tree->right);
 
 	if (h_left > h_right)
 		return (h_left + 1);
