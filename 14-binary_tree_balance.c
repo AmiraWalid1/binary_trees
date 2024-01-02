@@ -1,5 +1,4 @@
 #include "binary_trees.h"
-#include <stdio.h>
 
 /**
  * binary_tree_balance - measures the balance factor of a binary tree
