@@ -22,6 +22,20 @@ struct binary_tree_s
 
 typedef struct binary_tree_s binary_tree_t;
 
+/**
+ * struct linkedlist_node_s - single linkedlist node.
+ *
+ * @n: value.
+ * @next: pointer to next node.
+*/
+struct linkedlist_node_s
+{
+	int n;
+	struct linkedlist_node_s *next;
+};
+
+typedef struct linkedlist_node_s linkedlist_node_t;
+
 typedef struct binary_tree_s bst_t;
 typedef struct binary_tree_s avl_t;
 typedef struct binary_tree_s heap_t;
@@ -47,6 +61,7 @@ int binary_tree_is_full(const binary_tree_t *tree);
 int binary_tree_is_perfect(const binary_tree_t *tree);
 binary_tree_t *binary_tree_sibling(binary_tree_t *node);
 binary_tree_t *binary_tree_uncle(binary_tree_t *node);
+void binary_tree_levelorder(const binary_tree_t *tree, void (*func)(int));
 
 
 size_t binary_tree_height_t(const binary_tree_t *tree);
@@ -58,4 +73,5 @@ int binary_tree_is_bst(const binary_tree_t *tree);
 int maxValue(const binary_tree_t *node);
 int minValue(const binary_tree_t *node);
 
+bst_t *bst_insert(bst_t **tree, int value);
 #endif
