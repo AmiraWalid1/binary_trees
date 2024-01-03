@@ -50,6 +50,7 @@ binary_tree_t *binary_tree_uncle(binary_tree_t *node);
 
 
 size_t binary_tree_height_t(const binary_tree_t *tree);
+
 int binary_tree_is_full_t(const binary_tree_t *tree);
 signed int leaves_in_same_level(const binary_tree_t *tree);
 
