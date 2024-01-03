@@ -74,4 +74,5 @@ int maxValue(const binary_tree_t *node);
 int minValue(const binary_tree_t *node);
 
 bst_t *bst_insert(bst_t **tree, int value);
+bst_t *array_to_bst(int *array, size_t size);
 #endif
